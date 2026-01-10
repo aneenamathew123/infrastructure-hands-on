@@ -1,0 +1,6 @@
+id javed
+useradd -u 1975 -d /var/www/javed -m javed
+id javed
+cat /etc/passwd
+ls -ld /var/www/javed
+chown javed:javed /var/www/javed
