@@ -1,0 +1,17 @@
+# Verify if user exists
+id lilliana
+
+# Create user if not present
+useradd lilliana
+
+# Create project group
+groupadd project1
+
+# Verify group creation
+getent group project1
+
+# Add user to project group
+usermod -aG project1 lilliana
+
+# Verify group membership
+id lilliana
