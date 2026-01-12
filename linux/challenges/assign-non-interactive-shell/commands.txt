@@ -1,0 +1,14 @@
+#Verify if the user 'lilli' already exists
+id lilli
+# If the user exists, this will show UID, GID, and groups
+# otherwise return "no such user"
+
+#Create a new user 'lilli' with a non-interactive shell
+sudo useradd -m -s /sbin/nologin lilli
+# -m : create a home directory (/home/lilli)
+# -s : set the login shell (non-interactive)
+
+#Verify the user configuration
+getent passwd lilli
+# Output includes UID, GID, homedirectory, and the shell
+
