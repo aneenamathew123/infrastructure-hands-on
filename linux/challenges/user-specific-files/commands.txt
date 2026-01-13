@@ -1,0 +1,9 @@
+# Verify user exists
+id lilli
+
+# Change to source directory
+cd /home/usersdata
+
+# Find files owned by lilli and copy while preserving directory structure
+find . -type f -user lilli -exec cp --parents {} /official/ \;
+
