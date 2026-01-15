@@ -1,0 +1,17 @@
+# Verify existing permissions of the file
+ls -l /etc/hostname
+
+# Check existing ACL entries
+getfacl /etc/hostname
+
+# Grant read-only access to user max
+setfacl -m u:max:r-- /etc/hostname
+
+# Remove all permissions for user lilli
+setfacl -x u:lilli /etc/hostname
+
+# Ensure others have read-only permission
+chmod o=r /etc/hostname
+
+# Verify final ACL configuration
+getfacl /etc/hostname
