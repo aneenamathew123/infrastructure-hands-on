@@ -1,0 +1,23 @@
+## Verify the firewalld service status
+systemctl status firewalld
+
+## Start firewalld if it is not running
+systemctl start firewalld
+
+## Enable firewalld to start on boot
+systemctl enable firewalld
+
+## Set the default zone to public
+firewall-cmd --set-default-zone=public
+
+## Verify the default zone
+firewall-cmd --get-default-zone
+
+## Allow incoming traffic on port 6200/tcp in the public zone
+firewall-cmd --zone=public --add-port=6200/tcp --permanent
+
+## Reload firewalld to apply the changes
+firewall-cmd --reload
+
+## Verify the applied firewall rule
+firewall-cmd --zone=public --list-ports
