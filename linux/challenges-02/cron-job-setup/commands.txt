@@ -1,0 +1,18 @@
+# Install cronie
+sudo dnf install -y cronie
+
+# Enable service
+sudo systemctl enable crond
+sudo systemctl start crond
+
+# Verify service
+sudo systemctl status crond
+
+# Edit root crontab
+sudo crontab -e
+
+# Verify cron entry
+sudo crontab -l
+
+# Check test output
+cat /tmp/cron_text
