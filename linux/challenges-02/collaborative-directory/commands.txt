@@ -1,0 +1,14 @@
+#create a directory structure
+sudo mkdir -p /devoloper/data
+
+#Change group ownership for the created directory
+sudo chown :devoloper /devoloper/data
+
+#Assign read/write/execute permissions only for  owner and group 
+sudo chmod 770 /devoloper/data
+
+#Assign the setgid for new files to inherit the directory’s group
+sudo chmod g+s /devoloper/data
+
+#Verify the permissions
+ls -ld /devoloper/data
