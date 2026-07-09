@@ -2,7 +2,7 @@
 
 The following diagram illustrates the complete Linux boot sequence from power-on to the login prompt.
 
-![Linux Boot Process](../images/linux_boot_process.png)
+![Linux Boot Process](../images/linux-booting.jpg)
 
 ### Boot Sequence
 
